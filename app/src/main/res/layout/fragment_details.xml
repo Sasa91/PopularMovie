@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp" android:background="#40C4FF" android:id="@+id/movieTitleView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movie_title"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/movieTitleView">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/movieImg"
+            android:src="@drawable/sample"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tvReleaseDate"
+            android:layout_toRightOf="@+id/movieImg"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/vote"
+            android:layout_toRightOf="@+id/movieImg"
+            android:layout_below="@+id/tvReleaseDate"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tvSynopsis"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/movieImg"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+</ScrollView>
