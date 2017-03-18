@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name">PopularMovie-1</string>
 
+    <!-- Menu strings-->
+    <string name="menuPopularMovie">Popular Movie</string>
+    <string name="menuTopRated">Top Rated</string>
+    <string name="menuFavourites">Favourite</string>
+
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_trailers">Trailers:</string>
+
+    <string name="title_review">Reviews:</string>
+
+    <string name="btn_favourite">MARK AS FAVOURITE</string>
+
+    <string name="toast_favourite">Marked movie as favourite</string>
+    <string name="toast_unfavourite">Marked movie as unfavourite</string>
 
     <string-array name="service_url">
 

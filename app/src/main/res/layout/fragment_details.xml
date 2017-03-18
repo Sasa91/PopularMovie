@@ -1,80 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-
-
-    <FrameLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="120dp" android:background="#40C4FF" android:id="@+id/movieTitleView">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/movie_title"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            />
-
-    </FrameLayout>
-
-    <RelativeLayout
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/movieTitleView">
+        android:focusableInTouchMode="true">
 
-        <ImageView
-            android:layout_width="140dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="3dp"
-            android:id="@+id/movieImg"
-            android:src="@drawable/sample"
-            android:layout_marginTop="6dp"/>
 
-        <TextView
+        <FrameLayout
+            android:id="@+id/movieTitleView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#40C4FF">
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/movieSynopsisView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/tvReleaseDate"
-            android:layout_toRightOf="@+id/movieImg"
-            android:layout_marginTop="6dp"
-            android:textSize="14sp"
-            />
+            android:layout_below="@+id/movieTitleView">
 
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/vote"
-            android:layout_toRightOf="@+id/movieImg"
-            android:layout_below="@+id/tvReleaseDate"
-            android:layout_marginTop="4dp"
-            android:textSize="14sp"
-            />
+            <ImageView
+                android:id="@+id/movieImg"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/sample" />
+
+            <TextView
+                android:id="@+id/tvReleaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/movieImg"
+                android:text="releasedate"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/vote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvReleaseDate"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/movieImg"
+                android:text="voteavera"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnFavourite"
+                android:layout_width="100dp"
+                android:layout_height="53dp"
+                android:layout_below="@+id/vote"
+                android:layout_toRightOf="@+id/movieImg"
+                android:text="@string/btn_favourite" />
 
 
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/tvSynopsis"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/movieImg"
-            android:textSize="13sp"
-            android:layout_marginLeft="10dp"
-            />
+            <TextView
+                android:id="@+id/tvSynopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movieImg"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="synopsis"
+                android:textSize="13sp" />
 
+            <View
+                android:id="@+id/movieDivider"
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvSynopsis"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="#000000" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvTrailer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movieDivider" />
+
+            <View
+                android:id="@+id/reviewDivider"
+                android:layout_width="350dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rvTrailer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="#000000" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reviewDivider"
+                android:paddingBottom="6dp"
+                />
+        </RelativeLayout>
 
     </RelativeLayout>
-
-
-
-</RelativeLayout>
-
 </ScrollView>
+
+
+    <!---->
+
+
+
+
